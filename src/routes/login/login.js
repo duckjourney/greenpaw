@@ -1,33 +1,36 @@
-import { Fragment } from "react"
-import Navbar from "../../components/navbar/navbar";
-import "./login.css"
-import { Link } from "react-router-dom"
+import "./login.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <Fragment>
-      <Navbar />
     <div className="loginContainer">
-    <form action="/my-handling-form-page" method="post">
-      <h1 className="intro">
-        Bienvenido de nuevo!
-      </h1>
-      <div className="loginElements">
-        <div className="form-element email">
-          <label htmlFor="email">E-mail</label>
-          <input type="email" id="email" className="form-control" required />
+      <form action="/my-handling-form-page" method="post">
+        <h1 className="intro">Bienvenido de nuevo!</h1>
+        <div className="loginElements">
+          <div className="form-element email">
+            <label htmlFor="email">E-mail</label>
+            <input type="email" id="email" className="form-control" required />
+          </div>
+          <div className="form-element email">
+            <label htmlFor="email">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              className="form-control"
+              required
+            />
+          </div>
+          <p>
+            ¿No tienes una cuenta?{" "}
+            <Link to={"/register"} className="linkToRegister">
+              Regístrate
+            </Link>
+          </p>
         </div>
-        <div className="form-element email">
-          <label htmlFor="email">Contraseña</label>
-          <input type="password" id="password" className="form-control" required />
-        </div>
-        <p>¿No tienes una cuenta? <Link to={"/register"} className="linkToRegister">Regístrate</Link></p>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-  </Fragment>
-  )
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
