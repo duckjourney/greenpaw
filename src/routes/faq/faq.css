@@ -1,0 +1,124 @@
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vh;
+  min-height: 100vh;
+  text-align: justify;
+  padding: 17vh 5vw 10vh 5vw;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  justify-content: space-between;
+}
+
+.questionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 50vw;
+  padding: 1vh 2vw;
+  border-radius: 20px;
+  background-color: #8A4FFF;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.answer {
+  width: 65vw;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0;
+  max-height: 0vh;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  max-height: 65vh;
+}
+
+.faqLink {
+  font-size: 1.2rem;
+  color: #8A4FFF;
+}
+
+.developersProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vmin;
+  gap: 5vw;
+
+  & i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 100px;
+    min-height: 25vmin;
+    min-width: 25vmin;
+    background-color: #c3bef7;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+.developerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vmin;
+  min-width: 15vmin;
+  gap: 2vmin;
+  margin-top: 3vmin;
+
+  & h1 {
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+.Miguel {
+  height: 25vmin;
+  width: 25vmin;
+  border: 3px solid #8A4FFF;
+  border-radius: 100%;
+  background-image: url(../../resources/profiles/Miguel.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Keyla {
+  height: 25vmin;
+  width: 25vmin;
+  border: 3px solid #8A4FFF;
+  border-radius: 100%;
+  background-image: url(../../resources/profiles/keyla.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Oriol {
+  height: 25vmin;
+  width: 25vmin;
+  border-radius: 100%;
+  border: 3px solid #8A4FFF;
+  background-image: url(../../resources/profiles/Oriol.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+

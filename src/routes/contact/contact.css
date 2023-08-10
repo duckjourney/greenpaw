@@ -1,0 +1,101 @@
+/* FORM */
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vmin;
+  margin-top: 5vh;
+  font-weight: 400;
+  min-height: 50vh;
+  min-width: 65vw;
+}
+
+.formElements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3vmin;
+}
+
+/* INSIDE FORM */
+
+h1 {
+  width: 60vw;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 3vh;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.form-element input {
+  height: 5vmin;
+  padding-left: 1vmin;
+  border-radius: 5px;
+  border: 1px solid #8A4FFF;
+  text-transform: capitalize;
+  &:focus {
+    outline: none;
+  }
+}
+
+.email {
+  text-transform: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-element textarea {
+  padding-top: 1vmin;
+  padding-left: 1vmin;
+  border-radius: 5px;
+  border: 1px solid #8A4FFF;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* BUTTON */
+
+button {
+  cursor: pointer;
+  height: 5vmin;
+  width: 10vmin;
+  border: none;
+  border-radius: 5px;
+  background-color: #8A4FFF;
+  color:white;
+  transition: all ease-in-out 0.1s;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 3vh;
+
+  &:hover{
+    transform: scale(1.05);
+  }
+}
