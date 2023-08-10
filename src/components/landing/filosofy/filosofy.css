@@ -1,0 +1,89 @@
+
+/* Filosofy */
+
+.filosofy {
+  width: 90vw;
+  margin-top: 5vh;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 7vh;
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 20vw;
+  height: 65vh;
+  background-image: url(../../../resources/landing/reduce.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 20vw;
+  height: 65vh;
+  background-image: url(../../../resources/landing/reuse.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 20vw;
+  height: 65vh;
+  background-image: url(../../../resources/landing/recycle.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.card4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 20vw;
+  height: 65vh;
+  background-image: url(../../../resources/landing/recover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 3rem;
+  font-weight: 700;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}

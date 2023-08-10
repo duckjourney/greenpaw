@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import "./App.css";
+import Navbar from "./components/navbar/navbar";
+import Soil from "./components/landing/soil/soil";
+import Eolic from "./components/landing/eolic/eolic";
+import Filosofy from "./components/landing/filosofy/filosofy";
+import Recycle from "./components/landing/recycle/recycle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Navbar />
+      <div className="container">
+        <Soil />
+        <Eolic />
+        <Filosofy />
+        <Recycle />
+      </div>
+    </Fragment>
   );
 }
 

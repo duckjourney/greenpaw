@@ -1,0 +1,141 @@
+/* NAVBAR */
+
+nav {
+  min-height: 11vh;
+  background-color: #8a4fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0 4vmin;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 10vh;
+}
+
+/* USER ICON */
+
+.fa-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  max-height: 60vh;
+  top: 10vh;
+  transform: translateX(-110%);
+  transition: all ease-in-out 0.3s;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 35vmin;
+  height: 100vh;
+  background-color: #8a4fff;
+  padding-top: 3vmin;
+  padding-left: 5vmin;
+  list-style: none;
+}
+
+.fa-solid { 
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebarElement {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  width: 100%;
+  height: 15%;
+  background-color: #8a4fff;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+}
+
+.sidebarElement:hover {
+  transform: translateX(20px);
+}
+
+/* PROFILE OPTIONS */
+
+.logBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #8a4fff;
+  position:fixed;
+  width: fit-content;
+  height: fit-content;
+  gap: 2vh;
+  top: 13vh;
+  right: 1vw;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all ease-in-out 0.2s;
+  padding: 2vh 2vw;
+  cursor: pointer;
+  transform:translateX(110%) 
+}
+
+.logElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+  height: 5vh;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  transition: all ease-in-out 0.2s;
+  &:hover {
+    transform:translateX(5%)
+  }
+}
+
+.viewProfile {
+  width: fit-content;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.show {
+  transform: translateX(0%);
+}
