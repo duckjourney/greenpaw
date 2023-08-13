@@ -24,7 +24,7 @@ nav {
 
 /* USER ICON */
 
-.fa-user{
+.fa-user {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@ ul {
   list-style: none;
 }
 
-.fa-solid { 
+.fa-solid {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -77,6 +77,10 @@ ul {
   border-radius: 100px;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
+
+  &:hover {
+    transform: translateX(20px);
+  }
 }
 
 a {
@@ -84,10 +88,6 @@ a {
   font-size: 1.6rem;
   font-weight: 600;
   color: white;
-}
-
-.sidebarElement:hover {
-  transform: translateX(20px);
 }
 
 /* PROFILE OPTIONS */
@@ -98,7 +98,7 @@ a {
   align-items: flex-start;
   justify-content: center;
   background-color: #8a4fff;
-  position:fixed;
+  position: fixed;
   width: fit-content;
   height: fit-content;
   gap: 2vh;
@@ -109,7 +109,7 @@ a {
   transition: all ease-in-out 0.2s;
   padding: 2vh 2vw;
   cursor: pointer;
-  transform:translateX(110%) 
+  transform: translateX(110%);
 }
 
 .logElement {
@@ -124,7 +124,7 @@ a {
   color: white;
   transition: all ease-in-out 0.2s;
   &:hover {
-    transform:translateX(5%)
+    transform: translateX(5%);
   }
 }
 
@@ -139,3 +139,35 @@ a {
 .show {
   transform: translateX(0%);
 }
+
+@media screen and (max-width: 620px) {
+  
+  .logo {
+    max-height: 7vh;
+  }
+
+  .sidebarElement {
+    & a {
+      font-size: 1.3rem;
+    }
+  }
+
+  ul {
+    width: 50vmin;
+  }
+
+  .logBar {
+    & a,
+    li {
+      font-size: 1.3rem;
+    }
+  }
+  .fa-user {
+    font-size: 1.3rem;
+  }
+  .fa-solid {
+    font-size: 1.3rem;
+  }
+}
+
+

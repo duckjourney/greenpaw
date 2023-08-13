@@ -5,7 +5,7 @@
   justify-content: space-between;
   gap: 3vh;
   min-height: 100vh;
-  text-align: justify;
+  text-align: left;
   padding: 17vh 5vw 10vh 5vw;
 }
 
@@ -37,6 +37,7 @@
   opacity: 0;
   max-height: 0vh;
   overflow: hidden;
+  text-align: justify;
   transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out;
 }
 
@@ -120,5 +121,14 @@
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .questionContainer {
+    width: 90vw;
+  }
+  .answer {
+    width: 90vw;
+  }
 }
 

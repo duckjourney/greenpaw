@@ -9,16 +9,16 @@ function Filosofy() {
         compromiso con las 4 R del reciclaje:
       </p>
       <div className="cards">
-        <div className="card1">
+        <div className="card card1">
           <p>Reduce</p>
         </div>
-        <div className="card2">
+        <div className="card card2">
           <p>Reutiliza</p>
         </div>
-        <div className="card3">
+        <div className="card card3">
           <p>Recicla</p>
         </div>
-        <div className="card4">
+        <div className="card card4">
           <p>Recupera</p>
         </div>
       </div>

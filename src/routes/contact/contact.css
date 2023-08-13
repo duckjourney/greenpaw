@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 form {
@@ -98,4 +98,19 @@ button {
   &:hover{
     transform: scale(1.05);
   }
+}
+
+@media screen and (max-width: 550px) {
+  form {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+
+    & .formElements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
 }

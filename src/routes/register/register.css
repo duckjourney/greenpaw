@@ -27,11 +27,11 @@ form {
 
 /* INSIDE FORM */
 
-h1 {
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60vw;
+  width: 80vw;
   font-size: 1.2rem;
   font-weight: 300;
   margin-bottom: 3vh;
@@ -98,5 +98,22 @@ button {
 
   &:hover{
     transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .registerContainer {
+    height: 85vh;
+  } 
+
+  form {
+    font-size: 1rem;
+    text-align: center;
+    & .intro{
+      font-size: 1rem;
+      text-align: center;
+      width: 90vw;
+    }
   }
 }

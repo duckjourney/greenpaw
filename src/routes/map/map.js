@@ -5,8 +5,8 @@ import { coordinates } from "./coordinates";
 function Map() {
   const API = "AIzaSyA5ubGcRg6KNfpKyNFUUKVp6fWGf0RT-Co";
   const containerStyle = {
-    width: "60%",
-    height: "80vh",
+    width: "100%",
+    height: "70vh",
   };
 
   const center = {

@@ -26,31 +26,31 @@ function Navbar() {
       {/* SIDEBAR */}
       <div className={isSidebarOpen ? "sidebar show" : "sidebar"}>
         <ul id="sidebar">
-          <li className="sidebarElement">
+          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
             <i className="fa-solid fa-right-to-bracket"></i>
             <Link to={"/login"} className="login">
               Acceso
             </Link>
           </li>
-          <li className="sidebarElement">
+          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
             <i className="fa-solid fa-address-card"></i>
             <Link to={"/register"} className="register">
               Registro
             </Link>
           </li>
-          <li className="sidebarElement">
+          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
             <i className="fa-solid fa-map"></i>
             <Link to={"/map"} className="map">
               Mapa
             </Link>
           </li>
-          <li className="sidebarElement">
+          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
             <i className="fa-solid fa-circle-question"></i>
             <Link to={"/faq"} className="faq">
               FAQ
             </Link>
           </li>
-          <li className="sidebarElement">
+          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
             <i className="fa-solid fa-envelope"></i>
             <Link to={"/contact"} className="contact">
               Contacto
@@ -60,10 +60,10 @@ function Navbar() {
       </div>
       {/* PROFILE OPTIONS */}
       <ul className={isProfileBarOpen ? "logBar show" : "logBar"}>
-        <li className="logElement">
+        <li className="logElement" onClick={()=>setProfileBarOpen(false)}>
           <Link to={"/profile"} className="viewProfile">Mi perfil</Link>
         </li>
-        <li className="logElement logOut" >Cerrar sesión</li>
+        <li className="logElement logOut" onClick={()=>setProfileBarOpen(false)}>Cerrar sesión</li>
       </ul>
     </Fragment>
   );

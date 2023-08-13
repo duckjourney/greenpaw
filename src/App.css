@@ -26,5 +26,20 @@ body {
   font-size: 2rem;
   font-weight: 200;
   color: white;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    font-size: 1.7rem;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    font-size: 1.3rem;
+    overflow-x: hidden;
+  }
 }
 

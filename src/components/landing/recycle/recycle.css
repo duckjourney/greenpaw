@@ -13,3 +13,17 @@
   background-attachment: fixed;
   background-position: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .recycle {
+    padding: 10vmin;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .recycle {
+    padding: 5vmin;
+    font-size: 1.3rem;
+    background-attachment: scroll;
+  }
+}
