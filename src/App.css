@@ -31,12 +31,12 @@ body {
 
 @media screen and (max-width: 1024px) {
   .container {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     overflow-x: hidden;
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 620px) {
   .container {
     font-size: 1.3rem;
     overflow-x: hidden;

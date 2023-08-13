@@ -13,17 +13,20 @@
   background-attachment: fixed;
   background-position: top;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .eolic {
     padding: 10vmin;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 620px) {
   .eolic {
     padding: 5vmin;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: center;
     background-attachment: scroll;
   }
 }

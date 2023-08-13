@@ -12,17 +12,19 @@
   text-align: justify;
   background-attachment: fixed;
   background-position: center;
+  text-align: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .soil {
     padding: 10vmin;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 620px) {
   .soil {
     padding: 5vmin;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-attachment: scroll;
   }
 }

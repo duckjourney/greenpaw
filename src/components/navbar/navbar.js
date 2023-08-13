@@ -20,50 +20,56 @@ function Navbar() {
           <img className="logo" src={logo} alt="Green Paw logo" />
         </Link>
         <div>
-          <i className="fa-solid fa-user" onClick={()=> setProfileBarOpen(!isProfileBarOpen)}></i>
+          <i
+            className="fa-solid fa-user"
+            onClick={() => setProfileBarOpen(!isProfileBarOpen)}
+          ></i>
         </div>
       </nav>
       {/* SIDEBAR */}
       <div className={isSidebarOpen ? "sidebar show" : "sidebar"}>
         <ul id="sidebar">
-          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
+          <Link to={"/login"} className="sidebarElement login">
             <i className="fa-solid fa-right-to-bracket"></i>
-            <Link to={"/login"} className="login">
-              Acceso
-            </Link>
-          </li>
-          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
+            <li onClick={() => setSidebarOpen(false)}>Acceso</li>
+          </Link>
+          <Link to={"/register"} className="sidebarElement register">
             <i className="fa-solid fa-address-card"></i>
-            <Link to={"/register"} className="register">
-              Registro
-            </Link>
-          </li>
-          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
+            <li onClick={() => setSidebarOpen(false)}>Registro</li>
+          </Link>
+          <Link to={"/map"} className="sidebarElement map">
             <i className="fa-solid fa-map"></i>
-            <Link to={"/map"} className="map">
+            <li className="" onClick={() => setSidebarOpen(false)}>
               Mapa
-            </Link>
-          </li>
-          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
+            </li>
+          </Link>
+          <Link to={"/faq"} className="sidebarElement faq">
             <i className="fa-solid fa-circle-question"></i>
-            <Link to={"/faq"} className="faq">
+            <li className="" onClick={() => setSidebarOpen(false)}>
               FAQ
-            </Link>
-          </li>
-          <li className="sidebarElement" onClick={()=>setSidebarOpen(false)}>
+            </li>
+          </Link>
+          <Link to={"/contact"} className="sidebarElement contact">
             <i className="fa-solid fa-envelope"></i>
-            <Link to={"/contact"} className="contact">
+            <li className="" onClick={() => setSidebarOpen(false)}>
               Contacto
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
       {/* PROFILE OPTIONS */}
       <ul className={isProfileBarOpen ? "logBar show" : "logBar"}>
-        <li className="logElement" onClick={()=>setProfileBarOpen(false)}>
-          <Link to={"/profile"} className="viewProfile">Mi perfil</Link>
+        <li className="logElement" onClick={() => setProfileBarOpen(false)}>
+          <Link to={"/profile"} className="viewProfile">
+            Mi perfil
+          </Link>
         </li>
-        <li className="logElement logOut" onClick={()=>setProfileBarOpen(false)}>Cerrar sesión</li>
+        <li
+          className="logElement logOut"
+          onClick={() => setProfileBarOpen(false)}
+        >
+          Cerrar sesión
+        </li>
       </ul>
     </Fragment>
   );
