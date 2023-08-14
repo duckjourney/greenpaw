@@ -34,7 +34,7 @@ function Register() {
             />
           </div>
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit" className="registerButton">Enviar</button>
       </form>
     </div>
   );

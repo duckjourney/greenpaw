@@ -16,6 +16,10 @@ body {
   background-color: #c3bef7;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* LANDING */
 
 .container {

@@ -59,11 +59,11 @@ function Navbar() {
       </div>
       {/* PROFILE OPTIONS */}
       <ul className={isProfileBarOpen ? "logBar show" : "logBar"}>
-        <li className="logElement" onClick={() => setProfileBarOpen(false)}>
-          <Link to={"/profile"} className="viewProfile">
+        <Link to={"/profile"} className="viewProfile">
+          <li className="logElement" onClick={() => setProfileBarOpen(false)}>
             Mi perfil
-          </Link>
-        </li>
+          </li>
+        </Link>
         <li
           className="logElement logOut"
           onClick={() => setProfileBarOpen(false)}

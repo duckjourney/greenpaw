@@ -9,10 +9,10 @@
   background-repeat: no-repeat;
   height: 100vh;
   padding: 25vmin;
-  text-align: justify;
   background-attachment: fixed;
   background-position: center;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 @media screen and (max-width: 1200px) {
