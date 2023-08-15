@@ -21,7 +21,7 @@ function Login() {
             />
           </div>
           <p>
-            ¿No tienes una cuenta?{" "}
+            ¿No tienes una cuenta?
             <Link to={"/register"} className="linkToRegister">
               Regístrate
             </Link>
