@@ -5,72 +5,64 @@ USE green_paw;
 -- Tabla de Transacciones_Puntos
 CREATE TABLE Transacciones_Puntos (
     ID_transaccion BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    ID_usuario BIGINT UNSIGNED NULL,
-    ID_usercom BIGINT UNSIGNED NULL,
-    Fecha_Transaccion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)ENGINE = InnoDB;
+    ID_usuario BIGINT UNSIGNED NOT NULL,
+    ID_usercom BIGINT UNSIGNED NOT NULL,
+    Fecha_Transaccion DATE NOT NULL
+);
 
 -- Tabla de Usuarios
 CREATE TABLE Usuarios (
     ID_usuario BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     ID_rol BIGINT UNSIGNED NOT NULL,
-    Nickname VARCHAR(100) NOT NULL,
-    Contraseña VARCHAR(255) NOT NULL,
-    Correo VARCHAR(100) NOT NULL,
-    Cantidad_Puntos INT UNSIGNED NULL DEFAULT 0
-)ENGINE = InnoDB;
+    Nickname CHAR(50) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Correo CHAR(100) NOT NULL,
+    Cantidad_Puntos BIGINT NULL CHECK (Cantidad_Puntos >= 0 AND Cantidad_Puntos <= 1000) default 0
+);
 
 -- Tabla de Rol
 CREATE TABLE Rol (
     ID_rol BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    Tipo_rol VARCHAR(50) NOT NULL
-)ENGINE = InnoDB;
+    Tipo_rol CHAR(50) NOT NULL
+);
 
 -- Tabla de Usuarios_Comercio
 CREATE TABLE Usuarios_Comercio (
     ID_usercom BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    ID_comercio BIGINT UNSIGNED NULL,
-    Contraseña VARCHAR(100) NOT NULL,
-    Puntos INT UNSIGNED NULL
-)ENGINE = InnoDB;
+    ID_comercio BIGINT UNSIGNED NOT NULL,
+    Password CHAR(100) NOT NULL,
+    Puntos BIGINT NOT NULL
+);
 
 -- Tabla de Comercios
 CREATE TABLE Comercios (
     ID_comercio BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    Nombre_Comercio VARCHAR(100) NOT NULL,
-    Direccion VARCHAR(100) NULL,
+    Nombre_Comercio CHAR(100) NOT NULL,
+    Direccion CHAR(100) NULL,
     Telefono DECIMAL(50) NOT NULL,
-    Sector VARCHAR(50) NOT NULL
-    )ENGINE = InnoDB;
+    Sector CHAR(50) NOT NULL
+    );
 
 -- Relaciones --
 -- Rol (id_rol) ¬ Usuarios (id_rol) (1:N)--
 ALTER TABLE Usuarios
 	ADD CONSTRAINT FK_Usuarios_Rol
-	FOREIGN KEY (ID_rol) REFERENCES Rol (ID_rol) 
-    ON DELETE NO ACTION  -- NO permite eliminar registros en la tabla Rol si esta asociada a Usuarios
-    ON UPDATE NO ACTION;  -- NO permite modificar registros si esta asociado a la tabla Usuarios
+	FOREIGN KEY (ID_rol) REFERENCES Rol (ID_rol);
 
 -- Usuarios (id_usuario) ¬ Transacciones_Puntos (id_usuario) (1:N) --
 ALTER TABLE Transacciones_Puntos
     ADD CONSTRAINT FK_Transacciones_Puntos_Usuarios
-    FOREIGN KEY (ID_usuario) REFERENCES Usuarios (ID_usuario)
-    ON DELETE SET NULL -- NO se borrá la información asociada al usuario en la tabla de Transacciones si se decide borrar un ID de usuario
-    ON UPDATE NO ACTION; -- NO se podra modificar los IDs de los usuarios si estan vinculados a la Tabla de Transacciones
+    FOREIGN KEY (ID_usuario) REFERENCES Usuarios (ID_usuario);
 
 -- Comercios (id_comercio) ¬ Usuario_Comercio (id_comercio) (1:N) --
 ALTER TABLE Usuarios_Comercio
     ADD CONSTRAINT FK_Usuarios_Comercio_Comercios
-    FOREIGN KEY (ID_comercio) REFERENCES Comercios (ID_comercio)
-	ON DELETE SET NULL  -- NO se borran los IDs de Comercio al eliminar un usuario_comercio
-    ON UPDATE NO ACTION;  -- NO se permite actualizar los IDs de los Comercios
+    FOREIGN KEY (ID_comercio) REFERENCES Comercios (ID_comercio);
 
 -- Usuario_Comercio (id_usercom) ¬ Transacciones_Puntos (id_usercom) (1:N) --
 ALTER TABLE Transacciones_Puntos
     ADD CONSTRAINT FK_Transacciones_Puntos_Usuario_Comercio
-    FOREIGN KEY (ID_usercom) REFERENCES Usuarios_Comercio (ID_usercom)
-    ON DELETE SET NULL -- NO se borrá la información asociada al usuario_comercio en la tabla de Transacciones si se decide borrar un ID de usuario_comercio
-    ON UPDATE NO ACTION; -- NO se podra modificar los IDs de los usuarios:comercio si estan vinculados a la Tabla de Transacciones
+    FOREIGN KEY (ID_usercom) REFERENCES Usuarios_Comercio (ID_usercom);
 
 -- Añadir Información --
 /*Información Rol*/
@@ -90,7 +82,7 @@ INSERT INTO Comercios(Nombre_Comercio, Direccion, Telefono, Sector) VALUES
 ('Restaurante EcoFood', 'La Rambla, 95', '669242220', 'Alimentación');
 
 /*Información Uusarios*/
-INSERT INTO Usuarios(ID_rol, Nickname, Contraseña, Correo, Cantidad_Puntos) VALUES
+INSERT INTO Usuarios(ID_rol, Nickname, Password, Correo, Cantidad_Puntos) VALUES
 ('1', 'Maribel', SHA2('HSUOnX9b8', 256), 'maribelecheverria@gmail.com', 400),
 ('1', 'Angeles', SHA2('TTNSzTdSJreeKUl', 256), 'angelesandren@gmail.com', 75),
 ('1', 'Adrian', SHA2('aRwfe7F', 256), 'adrianperis@gmail.com', 700),
@@ -103,13 +95,13 @@ INSERT INTO Usuarios(ID_rol, Nickname, Contraseña, Correo, Cantidad_Puntos) VAL
 ('2', 'Admin', SHA2('Admin', 256), 'admin@gmail.com', 0);
 
 /*Información Usuarios_Comerio*/
-INSERT INTO Usuarios_comercio(ID_comercio, Contraseña, Puntos) VALUES
-('1', SHA2('AUnow2aks', 256), '10000'),
-('3', SHA2('AdcCc3n', 256), '10000'),
-('4', SHA2('OJiw2id3', 256), '10000'),
-('2', SHA2('JP20naqL', 256), '10000'),
-('5', SHA2('skPa2n34A', 256), '10000'),
-('6', SHA2('0ju2AN13', 256), '10000'),
-('1', SHA2('Pl92naQa', 256), '10000');
+INSERT INTO Usuarios_comercio(ID_comercio, Password, Puntos) VALUES
+('1', SHA2('AUnow2aks', 256), '1000'),
+('3', SHA2('AdcCc3n', 256), '1000'),
+('4', SHA2('OJiw2id3', 256), '1000'),
+('2', SHA2('JP20naqL', 256), '1000'),
+('5', SHA2('skPa2n34A', 256), '1000'),
+('6', SHA2('0ju2AN13', 256), '1000'),
+('1', SHA2('Pl92naQa', 256), '1000');
 
 
