@@ -17,7 +17,7 @@ CREATE TABLE Usuarios (
     Nickname VARCHAR(100) NOT NULL,
     Contraseña VARCHAR(255) NOT NULL,
     Correo VARCHAR(100) NOT NULL,
-    Cantidad_Puntos INT UNSIGNED NULL
+    Cantidad_Puntos INT UNSIGNED NULL DEFAULT 0
 )ENGINE = InnoDB;
 
 -- Tabla de Rol
