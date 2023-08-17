@@ -43,23 +43,6 @@ form {
   margin-bottom: 2vh;
 }
 
-.form-element {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-}
-
-.form-element input {
-  height: 5vmin;
-  padding-left: 1vmin;
-  border-radius: 5px;
-  border: 1px solid #8A4FFF;
-  text-transform: capitalize;
-  &:focus {
-    outline: none;
-  }
-}
-
 #email {
   text-transform:lowercase;
 }
@@ -70,30 +53,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.form-element textarea {
-  padding-top: 1vmin;
-  padding-left: 1vmin;
-  border-radius: 5px;
-  border: 1px solid #8A4FFF;
-  resize: none;
-  &:focus {
-    outline: none;
-  }
-}
-
 /* BUTTON */
 
-Button {
-  cursor: pointer;
-  height: 5vmin;
-  width: 10vmin;
-  border: none;
-  border-radius: 5px;
-  background-color: black;
-  color:white;
-  transition: all ease-in-out 0.1s;
-  font-size: 0.9rem;
-  font-weight: 400;
+button {
   margin-top: 3vh;
 
   &:hover{

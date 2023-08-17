@@ -42,30 +42,14 @@ h1 {
   margin-bottom: 2vh;
 }
 
-.form-element {
-  display: flex;
-  flex-direction: column;
-  width: 30vw;
-}
-
-.form-element input {
-  height: 5vmin;
-  padding-left: 1vmin;
-  border-radius: 5px;
-  border: 1px solid #8a4fff;
-  text-transform: capitalize;
-  &:focus {
-    outline: none;
-  }
-}
-
 #email {
   text-transform: lowercase;
 }
 
 .linkToRegister {
   font-size: 1rem;
-  color: #8a4fff;
+  color: #3C6E71;
+  margin-left: 1vmin;
 }
 
 /* BUTTON */
@@ -76,7 +60,7 @@ button {
   width: 10vmin;
   border: none;
   border-radius: 5px;
-  background-color: #8a4fff;
+  background-color: #3C6E71;
   color: white;
   transition: all ease-in-out 0.1s;
   font-size: 0.9rem;

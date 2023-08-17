@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
-import logo from "../../resources/logoPaws.png";
+import logo from "../../resources/logo.png";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
 
@@ -19,11 +19,28 @@ function Navbar() {
         <Link to={"/"}>
           <img className="logo" src={logo} alt="Green Paw logo" />
         </Link>
-        <div>
-          <i
-            className="fa-solid fa-user"
+        <div className="navLinks">
+          <Link to={"/login"} className="navElement login">
+            <i className="fa-solid fa-right-to-bracket"></i>
+            <li onClick={() => setSidebarOpen(false)}>Acceso</li>
+          </Link>
+          <Link to={"/register"} className="navElement register">
+            <i className="fa-solid fa-address-card"></i>
+            <li onClick={() => setSidebarOpen(false)}>Registro</li>
+          </Link>
+          <Link to={"/map"} className="navElement map">
+            <i className="fa-solid fa-map"></i>
+            <li className="" onClick={() => setSidebarOpen(false)}>
+              Mapa
+            </li>
+          </Link>
+          <div
+            className="navElement profile"
             onClick={() => setProfileBarOpen(!isProfileBarOpen)}
-          ></i>
+          >
+            <i className="fa-solid fa-user"></i>
+            <li>Perfil</li>
+          </div>
         </div>
       </nav>
       {/* SIDEBAR */}

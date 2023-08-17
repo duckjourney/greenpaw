@@ -25,7 +25,7 @@
   width: 50vw;
   padding: 1vh 2vw;
   border-radius: 20px;
-  background-color: #8A4FFF;
+  background-color: #3C6E71;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -48,7 +48,8 @@
 
 .faqLink {
   font-size: 1.2rem;
-  color: #8A4FFF;
+  font-weight: 600;
+  color: #3C6E71;
 }
 
 .developersProfile {
@@ -66,7 +67,6 @@
     font-size: 100px;
     min-height: 25vmin;
     min-width: 25vmin;
-    background-color: #c3bef7;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
@@ -90,7 +90,7 @@
 .Miguel {
   height: 25vmin;
   width: 25vmin;
-  border: 3px solid #8A4FFF;
+  border: 3px solid #3C6E71;
   border-radius: 100%;
   background-image: url(../../resources/profiles/Miguel.jpeg);
   background-size: cover;
@@ -102,7 +102,7 @@
 .Keyla {
   height: 25vmin;
   width: 25vmin;
-  border: 3px solid #8A4FFF;
+  border: 3px solid #3C6E71;
   border-radius: 100%;
   background-image: url(../../resources/profiles/keyla.jpg);
   background-size: cover;
@@ -115,7 +115,7 @@
   height: 25vmin;
   width: 25vmin;
   border-radius: 100%;
-  border: 3px solid #8A4FFF;
+  border: 3px solid #3C6E71;
   background-image: url(../../resources/profiles/Oriol.jpeg);
   background-size: cover;
   background-repeat: no-repeat;

@@ -20,9 +20,9 @@
     justify-content: center;
     height: 35vmin;
     width: 35vmin;
-    border: 5px solid #8A4FFF;
+    border: 5px solid #3C6E71;
     border-radius: 100%;
-    background-color: #c3bef7;
+    background-color: #D1D3C4;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
   }
@@ -93,7 +93,7 @@
 progress[value] {-webkit-appearance: none;}
 progress[value]::-webkit-progress-value {color: white;}
 progress[value]::-webkit-progress-value {
-  background-color: #8a4fff;
+  background-color: #3C6E71;
   border-radius: 20px;
 }
 progress::-webkit-progress-bar {
@@ -102,7 +102,7 @@ progress::-webkit-progress-bar {
 }
 
 span {
-  color: #8A4FFF;
+  color: #3C6E71;
   font-size: 1rem;
   font-weight: 600;
 }

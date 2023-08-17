@@ -34,26 +34,26 @@
 }
 
 .card1 {
-  background-image: url(../../../resources/landing/reduce.jpg);
+  background-image: url(../../../resources/landing/reduce.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .card2 {
-  background-image: url(../../../resources/landing/reuse.jpg);
+  background-image: url(../../../resources/landing/reuse.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .card3 {
-  background-image: url(../../../resources/landing/recycle.jpg);
+  background-image: url(../../../resources/landing/recycle.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .card4 {
 
-  background-image: url(../../../resources/landing/recover.jpg);
+  background-image: url(../../../resources/landing/recover.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

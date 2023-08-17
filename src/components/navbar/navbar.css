@@ -1,8 +1,8 @@
 /* NAVBAR */
 
 nav {
-  min-height: 10vh;
-  background-color: #8a4fff;
+  height: 10vh;
+  background-color: #3C6E71;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +10,16 @@ nav {
   z-index: 1;
   width: 100vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 0 4vmin;
+  padding: 0 7vmin;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5vmin;
+  height: 100%;
+  width: fit-content;
 }
 
 /* LOGO */
@@ -19,7 +28,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 10vh;
+  max-height: 9vh;
 }
 
 /* USER ICON */
@@ -28,7 +37,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
   color: white;
   cursor: pointer;
 }
@@ -38,10 +46,10 @@ nav {
 .sidebar {
   position: fixed;
   z-index: 1;
-  max-height: 60vh;
   top: 9vh;
   transform: translateX(-110%);
   transition: all ease-in-out 0.3s;
+  display: none;
 }
 
 ul {
@@ -51,13 +59,13 @@ ul {
   justify-content: flex-start;
   width: 35vmin;
   height: 100vh;
-  background-color: #8a4fff;
-  padding-top: 10vmin;
+  background-color: #3C6E71;
+  padding-top: 20vmin;
+  gap: 3vmin;
   padding-left: 5vmin;
 }
 
 .fa-solid {
-  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,25 +73,41 @@ ul {
   cursor: pointer;
 }
 
+.fa-bars{
+  display: none;
+}
+
 .sidebarElement {
   display: flex;
   align-items: center;
-  justify-content: left;
-  gap: 20px;
-  width: 100%;
-  height: 15%;
-  background-color: #8a4fff;
-  border-radius: 100px;
+  gap: 10px;
+  height: 10vh;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
   list-style: none;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: white;
 
   &:hover {
-    transform: translateX(20px);
+    transform:translateY(5px);
+  }
+}
+
+.navElement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 10vh;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  list-style: none;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+
+  &:hover {
+    transform:translateY(5px);
   }
 }
 
@@ -92,9 +116,8 @@ ul {
 .logBar {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  background-color: #8a4fff;
+  background-color: #3C6E71;
   position: fixed;
   width: fit-content;
   height: fit-content;
@@ -106,8 +129,8 @@ ul {
   padding: 2vh 2vw;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
-  transform: translateX(110%);
   z-index: 1;
+  transform: translateX(110%);
 
   & .viewProfile {
     text-decoration: none;
@@ -117,9 +140,8 @@ ul {
 .logElement {
   list-style: none;
   height: 5vh;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: white;
   transition: all ease-in-out 0.2s;
   &:hover {
@@ -131,35 +153,51 @@ ul {
   transform: translateX(0%);
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1024px) {
+
   .logo {
     max-height: 7vh;
   }
 
   .sidebarElement {
-    font-size: 1.3rem;
-  }
+      transition: all ease-in-out 0.2s;
+    
+      &:hover {
+        transform:translateX(15px);
+      }
+    }
 
   ul {
-    width: 50vmin;
-  }
-
-  .logBar {
-    & a,
-    li {
-      font-size: 1.3rem;
-    }
-  }
-  .fa-user {
-    font-size: 1.3rem;
-  }
-  .fa-solid {
-    font-size: 1.3rem;
+    max-width: 50vmin;
+    padding-top: 15vmin;
   }
 
   .logBar {
     padding-right: 5vmin;
     padding-left: 5vmin;
-    font-size: 1.3rem;
   }
-}
+
+  .fa-bars{
+    display: flex;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  .navElement:not(.profile) {
+    display: none;
+  }
+
+  .profile li {
+    display: none;
+  }
+
+  }
+
+  @media screen and (max-width: 650px) {
+    ul {
+      width: 50vmin;
+      padding-top: 20vmin;
+    }
+  }
