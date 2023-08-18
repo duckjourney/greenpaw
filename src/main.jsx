@@ -10,9 +10,12 @@ import Contact from "./routes/contact/contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layout/layout";
 import App from "./App";
+import { UserProvider } from "./routes/login/userContext";
 
-function AppRoutes() {
-  return (
+
+ReactDOM.render(
+  <React.StrictMode>
+    <UserProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -26,12 +29,7 @@ function AppRoutes() {
         </Route>
       </Routes>
     </Router>
-  );
-}
-
-ReactDOM.render(
-  <React.StrictMode>
-    <AppRoutes />
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

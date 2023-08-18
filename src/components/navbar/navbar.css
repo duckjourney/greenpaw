@@ -75,6 +75,7 @@ ul {
 
 .fa-bars{
   display: none;
+  font-size: 1.3rem;
 }
 
 .sidebarElement {
@@ -124,7 +125,7 @@ ul {
   gap: 2vh;
   top: 13vh;
   right: 1vw;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 2vh 2vw;
   cursor: pointer;

@@ -3,13 +3,13 @@ import "./register.css";
 function Register() {
   return (
     <div className="registerContainer">
-      <form action="/my-handling-form-page" method="post">
+      <form method="post">
         <h1 className="intro">Registrate ahora y empieza a ganar puntos!</h1>
         <h2 className="registerIntro">Introduce tus datos</h2>
         <div className="registerElements">
           <div className="form-element name">
             <label htmlFor="name">Nombre</label>
-            <input type="text" id="name" className="form-control" required />
+            <input type="text" id="name" className="form-control" autoFocus required />
           </div>
           <div className="form-element email">
             <label htmlFor="email">E-mail</label>
