@@ -12,15 +12,10 @@ function Register() {
     confirmPassword: "",
   });
 
-  const handleInputChange = (event) => {
-    const { id, value } = event.target;
-    setFormData((prevState) => ({ ...prevState, [id]: value }));
-  };
-
   const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     // Verificar si las contraseñas coinciden
     if (formData.password !== formData.confirmPassword) {
@@ -80,7 +75,7 @@ function Register() {
               id="nickname"
               className="form-control"
               value={formData.nickname}
-              onChange={handleInputChange}
+              onChange={(e) => setFormData({ ...formData, nickname: e.target.value })}
               autoFocus
               required
             />
@@ -92,7 +87,7 @@ function Register() {
               id="email"
               className="form-control"
               value={formData.email}
-              onChange={handleInputChange}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
             />
           </div>
@@ -103,7 +98,7 @@ function Register() {
               id="password"
               className="form-control"
               value={formData.password}
-              onChange={handleInputChange}
+              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               required
             />
           </div>
@@ -114,7 +109,7 @@ function Register() {
               id="confirmPassword"
               className="form-control"
               value={formData.confirmPassword}
-              onChange={handleInputChange}
+              onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
               required
             />
           </div>
