@@ -49,8 +49,9 @@ function Login() {
     <div className="loginContainer">
       <ToastContainer
         position="bottom-center"
+        theme="colored"
         autoClose={2000}
-        hideProgressBar={false}
+        hideProgressBar={true}
         newestOnTop
         closeOnClick
         rtl={false}
