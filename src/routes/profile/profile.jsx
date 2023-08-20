@@ -24,7 +24,7 @@ function Profile() {
       <div className={profileVisibility ? "data visible" : "data"}>
         <h1 className="nickname">{user.Nickname}</h1>
         <h2 className="emailProfile">{user.Email}</h2>
-        <h3 className="id">#{user.ID_usuario}</h3>
+        <h3 className="id">#{user.id_usuario}</h3>
         <button className="canjearPuntos" onClick={handleRedeemClick}>Canjear puntos</button>
       </div>
       <div className="progressBar">
