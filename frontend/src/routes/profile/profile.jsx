@@ -22,19 +22,19 @@ function Profile() {
         <i className="fa-solid fa-user"></i>
       </div>
       <div className={profileVisibility ? "data visible" : "data"}>
-        <h1 className="nickname">{user.Nickname}</h1>
-        <h2 className="emailProfile">{user.Email}</h2>
-        <h3 className="id">#{user.id_usuario}</h3>
+        <h1 className="nickname">{user.nickname}</h1>
+        <h2 className="emailProfile">{user.email}</h2>
+        <h3 className="id">#{user.idUsuario}</h3>
         <button className="canjearPuntos" onClick={handleRedeemClick}>Canjear puntos</button>
       </div>
       <div className="progressBar">
         <progress
           className="progress"
           id="myProgressBar"
-          value={user.Cantidad_Puntos}
+          value={user.cantidadPuntos}
           max="1000"
         ></progress>
-        <span>{user.Cantidad_Puntos}/1000</span>
+        <span>{user.cantidadPuntos}/1000</span>
       </div>
 
       {/* QR PopUp */}
@@ -42,7 +42,7 @@ function Profile() {
         <div className="qrPopup">
           <div className="popupContent">
             <button onClick={() => setShowQRPopup(false)}>Cerrar</button>
-            <QRCode value={`Usuario: ${user.Nickname}, Correo: ${user.Email}`} />
+            <QRCode value={`Usuario: ${user.nickname}, Correo: ${user.email}`} />
           </div>
         </div>
       )}

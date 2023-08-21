@@ -21,12 +21,12 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("http://localhost:8080/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password }), 
       });
 
       const data = await response.json();
@@ -35,6 +35,7 @@ function Login() {
         toast.success("Bienvenid@ de nuevo!", {
           onClose: () => navigate("/profile"),
         });
+        console.log(data);
         handleLoginSuccess(data.user);
       } else {
         toast.error(data.message);
@@ -48,7 +49,7 @@ function Login() {
   return (
     <div className="loginContainer">
       <ToastContainer
-        position="bottom-center"
+        position="top-center"
         theme="colored"
         autoClose={2000}
         hideProgressBar={true}

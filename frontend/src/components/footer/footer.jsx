@@ -14,6 +14,10 @@ function Footer() {
           <li>Contacto</li>
         </Link>
       </div>
+      <div className="newsletter">
+        <label htmlFor="newsletter">Suscribete a nuestra newsletter!</label>
+        <input name="newsletter" type="text" placeholder="Indicanos tu email"/>
+      </div>
       <div className="socialMedia">
         <i className="fa-brands fa-linkedin"></i>
         <i className="fa-brands fa-instagram"></i>

@@ -25,7 +25,7 @@ function Register() {
 
     // Enviar la información al servidor
     try {
-      const response = await fetch("http://localhost:3001/register", {
+      const response = await fetch("http://localhost:8080/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function Register() {
   return (
     <div className="registerContainer">
       <ToastContainer
-        position="bottom-center"
+        position="top-center"
         theme="colored"
         autoClose={2000}
         hideProgressBar={true}
@@ -75,7 +75,9 @@ function Register() {
               id="nickname"
               className="form-control"
               value={formData.nickname}
-              onChange={(e) => setFormData({ ...formData, nickname: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, nickname: e.target.value })
+              }
               autoFocus
               required
             />
@@ -87,7 +89,9 @@ function Register() {
               id="email"
               className="form-control"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               required
             />
           </div>
@@ -98,7 +102,9 @@ function Register() {
               id="password"
               className="form-control"
               value={formData.password}
-              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
               required
             />
           </div>
@@ -109,7 +115,9 @@ function Register() {
               id="confirmPassword"
               className="form-control"
               value={formData.confirmPassword}
-              onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, confirmPassword: e.target.value })
+              }
               required
             />
           </div>
