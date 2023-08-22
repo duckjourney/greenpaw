@@ -46,7 +46,7 @@ function Register() {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error("Vaya parece que algo ha salido mal:", error);
+      toast.error("Vaya parece que algo ha salido mal.", error);
     }
   };
 
