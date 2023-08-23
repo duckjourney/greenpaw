@@ -1,22 +1,28 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const UserContext = createContext();
 
-// eslint-disable-next-line react/prop-types
 export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const savedUser = JSON.parse(localStorage.getItem('user'));
+  
+  const [user, setUser] = useState(savedUser);
+
+  const saveUser = (userObj) => {
+    localStorage.setItem('user', JSON.stringify(userObj));
+    setUser(userObj);
+  };
 
   const logout = () => {
-      setUser(null);
+    localStorage.removeItem('user');
+    setUser(null);
   };
 
   return (
-      <UserContext.Provider value={{ user, setUser, logout }}>
-          {children}
-      </UserContext.Provider>
+    <UserContext.Provider value={{ user, setUser: saveUser, logout }}>
+      {children}
+    </UserContext.Provider>
   );
 };
-
 
 export function useUser() {
   return useContext(UserContext);

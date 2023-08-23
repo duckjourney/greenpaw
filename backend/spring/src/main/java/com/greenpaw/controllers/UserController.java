@@ -93,7 +93,6 @@ public class UserController {
             return ResponseEntity.ok(Map.of("success", false, "message", "User not found."));
         }
 
-        // Assuming the max value of Cantidad_Puntos is 1000
         if (user.getCantidadPuntos() + 20 <= 1000) {
             user.setCantidadPuntos(user.getCantidadPuntos() + 20);
             userRepository.save(user);
