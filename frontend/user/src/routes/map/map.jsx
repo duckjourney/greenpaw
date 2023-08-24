@@ -15,6 +15,7 @@ function Map() {
   };
   return (
     <div className="mapContainer">
+      <h1>En este mapa podrás ver los comercios asociados en los que canjear tus puntos:</h1>
       <LoadScript googleMapsApiKey={API}>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
           {/* MAP THROUGH COORDINATES */}

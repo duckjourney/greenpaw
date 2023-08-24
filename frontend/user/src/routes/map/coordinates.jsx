@@ -1,6 +1,4 @@
 export const coordinates = [
-  { lat: -3.745, lng: -38.523 },
-  { lat: -3.755, lng: -38.533 },
   { lat: 41.3875, lng: 2.1709 },
   { lat: 41.3858, lng: 2.1727 },
   { lat: 41.3888, lng: 2.1689 },
