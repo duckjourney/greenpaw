@@ -94,7 +94,7 @@ public class UserController {
         }
 
         if (user.getCantidadPuntos() + 20 <= 1000) {
-            user.setCantidadPuntos(user.getCantidadPuntos() + 20);
+            user.setCantidadPuntos(user.getCantidadPuntos() + 50);
             userRepository.save(user);
             return ResponseEntity.ok(Map.of("success", true, "message", "User rewarded successfully."));
         } else {
