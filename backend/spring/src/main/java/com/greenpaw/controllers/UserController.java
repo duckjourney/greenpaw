@@ -67,16 +67,14 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody UserEntity newUser) {
-        // Verifica si ya existe un usuario con el correo indicado
         UserEntity existingUser = userRepository.findByEmail(newUser.getEmail());
         if (existingUser != null) {
             return ResponseEntity.ok(Map.of("success", false, "message", "Parece que ya existe una cuenta con este email."));
         }
 
-        newUser.setIdRol(1); // Establece el rol por defecto como '1' para 'Usuario Normal'
-        newUser.setCantidadPuntos(0); // Establece los puntos por defecto como '0'
+        newUser.setIdRol(1);
+        newUser.setCantidadPuntos(0);
 
-        // Guarda el nuevo usuario en la base de datos
         UserEntity registeredUser = userRepository.save(newUser);
 
         if (registeredUser != null) {
@@ -102,4 +100,10 @@ public class UserController {
         }
     }
 
+    // Addition for the leaderboard functionality
+    @GetMapping("/leaderboard")
+    public ResponseEntity<?> getLeaderboard() {
+        List<UserEntity> leaderboard = userRepository.findUsersSortedByPoints();
+        return ResponseEntity.ok(leaderboard);
+    }
 }
