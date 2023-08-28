@@ -28,17 +28,21 @@ function Navbar() {
             <Fragment>
               <Link to={"/login"} className="navElement login">
                 <i className="fa-solid fa-right-to-bracket"></i>
-                <li onClick={() => setSidebarOpen(false)}>Acceso</li>
+                <li>Acceso</li>
               </Link>
               <Link to={"/register"} className="navElement register">
                 <i className="fa-solid fa-address-card"></i>
-                <li onClick={() => setSidebarOpen(false)}>Registro</li>
+                <li>Registro</li>
               </Link>
             </Fragment>
           )}
+          <Link to={"/leaderboard"} className="navElement leaderboard">
+            <i className="fa-solid fa-ranking-star"></i>
+            <li>Clasificación</li>
+          </Link>
           <Link to={"/map"} className="navElement map">
             <i className="fa-solid fa-map"></i>
-            <li onClick={() => setSidebarOpen(false)}>Mapa</li>
+            <li>Mapa</li>
           </Link>
           {user && (
             <div
@@ -75,6 +79,10 @@ function Navbar() {
               </Link>
             </Fragment>
           )}
+           <Link to={"/leaderboard"} className="sidebarElement leaderboard">
+            <i className="fa-solid fa-ranking-star"></i>
+            <li onClick={() => setSidebarOpen(false)}>Clasificación</li>
+          </Link>
           <Link
             to={"/map"}
             className="sidebarElement map"

@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./layout/layout";
 import App from "./App";
 import { UserProvider } from "./routes/login/userContext";
+import Leaderboard from "./routes/leaderboard/leaderboard";
 
 
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="map" element={<Map />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />

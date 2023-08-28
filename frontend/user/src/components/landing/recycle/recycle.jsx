@@ -8,9 +8,7 @@ function Recycle() {
       reciclar botellas, pilas y ropa de segunda mano, o hacer
       voluntariados, y ganar puntos. Estos puntos no son solo una medida
       de tu contribución al medio ambiente; también son canjeables por
-      descuentos en comercios asociados. Al realizar acciones que ayudan
-      al planeta, como reciclar y entregar ropa de segunda mano, acumulas
-      puntos que puedes utilizar para obtener beneficios en tus compras.
+      descuentos en comercios asociados.
     </p>
   </div>
   )

@@ -170,7 +170,7 @@ ul {
 
   ul {
     max-width: 50vmin;
-    padding-top: 15vmin;
+    padding-top: 7vmin;
   }
 
   .logBar {
@@ -199,6 +199,6 @@ ul {
   @media screen and (max-width: 650px) {
     ul {
       width: 50vmin;
-      padding-top: 20vmin;
+      padding-top: 10vmin;
     }
   }

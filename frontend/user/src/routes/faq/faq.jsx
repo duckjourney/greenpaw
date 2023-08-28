@@ -67,8 +67,11 @@ function Faq() {
           <i className="fa-solid fa-caret-down"></i>
         </h2>
         <p className={openQuestion === "q3" ? "answer visible" : "answer"}>
-          Puedes canjear tus puntos en los comercios destacados en la sección
-          <Link></Link> de nuestra página web. Algunos de los comercios
+          Puedes canjear tus puntos en los comercios destacados en la sección{" "}
+          <Link className="faqLink" to={"/map"}>
+            Mapa
+          </Link>{" "}
+          de nuestra página web. Algunos de los comercios
           participantes son: Humana, Supermercados Dia, Cafetería la Esquina,
           Tea Shop, Alcampo, Kiabi y Bershka, entre otros. Te invitamos a
           explorar esta sección para conocer todos los establecimientos
