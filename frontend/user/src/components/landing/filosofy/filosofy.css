@@ -6,6 +6,7 @@
   margin-top: 5vh;
   font-weight: 600;
   text-align: center;
+  /* color: #3C6E71; */
 }
 
 /* Cards */
@@ -61,11 +62,6 @@
 
 @media screen and (max-width: 1024px) {
   .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
     max-width: 25vw;
     height: 40vh;
     font-size: 2rem;
@@ -87,10 +83,7 @@
 @media screen and (max-width: 590px) {
 
   .cards {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
     margin-top: 5vh;
     gap: 7vh;

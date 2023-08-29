@@ -55,14 +55,19 @@
   }
 
   & input {
-  height: 5vmin;
-  padding-left: 1vmin;
-  border-radius: 5px;
-  width: 25vmin;
-  border: 1px solid #3C6E71;
-  &:focus {
-    outline: none;
+    height: 5vmin;
+    padding-left: 1vmin;
+    border-radius: 5px;
+    width: 25vmin;
+    border: 1px solid #3c6e71;
+    &:focus {
+      outline: none;
+    }
   }
+
+  & i {
+    color: #3c6e71;
+    font-size: 1.5rem;
   }
 }
 

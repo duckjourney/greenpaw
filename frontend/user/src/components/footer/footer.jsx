@@ -16,7 +16,8 @@ function Footer() {
       </div>
       <div className="newsletter">
         <label htmlFor="newsletter">Suscribete a nuestra newsletter!</label>
-        <input name="newsletter" type="text" placeholder="Indicanos tu email"/>
+        <input name="newsletter" type="text" placeholder="Indícanos tu email"/>
+        <i className="fa-solid fa-paper-plane"></i>
       </div>
       <div className="socialMedia">
         <i className="fa-brands fa-linkedin"></i>
