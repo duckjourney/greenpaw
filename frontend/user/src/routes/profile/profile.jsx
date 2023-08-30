@@ -48,9 +48,8 @@ function Profile() {
         <span>{userData.cantidadPuntos}/1000</span>
       </div>
       {showQRPopup && (
-        <div className="qrPopup">
-          <div className="popupContent">
-            <button onClick={() => setShowQRPopup(false)}>Cerrar</button>
+        <div className="qrPopup" onClick={() => setShowQRPopup(false)}>
+          <div className="popupContent" onClick={(e) => e.stopPropagation()}>
             <QRCode
               value={`Usuario: ${userData.nickname}, Correo: ${userData.email}`}
             />
