@@ -141,6 +141,7 @@ ul {
 .logElement {
   list-style: none;
   height: 5vh;
+  min-width: 10vw;
   font-size: 1.3rem;
   font-weight: 300;
   color: white;
