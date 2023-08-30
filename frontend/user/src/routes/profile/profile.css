@@ -127,6 +127,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .popupContent {
@@ -135,13 +136,6 @@ span {
   border-radius: 8px;
   position: relative;
 }
-
-.popupContent button {
-  position: absolute;
-  top: -40px;
-  right: -50px;
-}
-
 
 @media screen and (max-width: 620px) {
 .profileCard {

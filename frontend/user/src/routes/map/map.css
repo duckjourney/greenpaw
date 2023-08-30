@@ -12,8 +12,14 @@
   z-index: 0;
 }
 
+gmp-map {
+  width: 80vw;
+  height: 70vh;
+}
+
 @media screen and (max-width: 620px) {
   .mapContainer {
     width: 100vw;
+    min-height: 100vh;
   }
 }

@@ -1,29 +1,31 @@
 import "./map.css";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import { coordinates } from "./coordinates";
 
 function Map() {
-  const API = "AIzaSyA5ubGcRg6KNfpKyNFUUKVp6fWGf0RT-Co";
-  const containerStyle = {
-    width: "100%",
-    height: "70vh",
-  };
-
-  const center = {
-    lat: 41.387215180730614,
-    lng: 2.1700301742293218,
-  };
   return (
     <div className="mapContainer">
       <h1>En este mapa podrás ver los comercios asociados en los que canjear tus puntos:</h1>
-      <LoadScript googleMapsApiKey={API}>
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
-          {/* MAP THROUGH COORDINATES */}
-          {coordinates.map((position, index) => (
-            <Marker key={index} position={position} />
-          ))}
-        </GoogleMap>
-      </LoadScript>
+      <gmp-map center="41.387447357177734,2.169898271560669" zoom="14" map-id="DEMO_MAP_ID">
+      <gmp-advanced-marker position="41.3875,2.1709">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3858, 2.1727">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3888,2.1689">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3861,2.1733">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3908,2.1771">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3822,2.1699">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.383,2.1635">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3766,2.1589">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.3773,2.099">
+      </gmp-advanced-marker>
+      <gmp-advanced-marker position="41.4102,2.2172">
+      </gmp-advanced-marker>
+    </gmp-map>
     </div>
   );
 }
